@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>SPARK · CCHMC Radiology Programming</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="masthead__brand" href="#" aria-label="SPARK">
+      <img src="assets/spark-wordmark.svg" alt="SPARK" />
+    </a>
+    <nav class="masthead__nav">
+      <button class="nav-btn" id="todayBtn">This Week</button>
+      <button class="nav-btn" id="jumpBtn">Jump to&hellip;</button>
+      <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme" title="Toggle paper / ink">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+    <p class="masthead__sub" data-issue=""></p>
+  </header>
+
+  <main class="stage">
+    <button class="page-arrow page-arrow--prev" id="prevBtn" aria-label="Previous">‹</button>
+    <div class="book-wrap">
+      <div id="book"></div>
+    </div>
+    <button class="page-arrow page-arrow--next" id="nextBtn" aria-label="Next">›</button>
+  </main>
+
+  <footer class="footer">
+    <span id="pageInfo">— · —</span>
+  </footer>
+
+  <dialog class="jumper" id="jumperDialog">
+    <form method="dialog">
+      <h3>Jump to a week</h3>
+      <ul class="jumper__list" id="jumperList"></ul>
+      <button class="jumper__close" type="submit">Close</button>
+    </form>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg width="2000" height="250" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sparkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D54070"/>
+      <stop offset="16.6%" stop-color="#8F4469"/>
+      <stop offset="33.2%" stop-color="#CA5699"/>
+      <stop offset="49.8%" stop-color="#59B8DA"/>
+      <stop offset="66.4%" stop-color="#9AD0DD"/>
+      <stop offset="83%" stop-color="#73B44A"/>
+      <stop offset="100%" stop-color="#9AC449"/>
+    </linearGradient>
+  </defs>
+  <text
+    x="500"
+    y="217"
+    text-anchor="middle"
+    font-size="300"
+    font-family="Inter, Helvetica, Arial, sans-serif"
+    font-weight="700"
+    letter-spacing="10"
+    fill="url(#sparkGradient)">
+    SPARK
+  </text>
+</svg>
