@@ -531,11 +531,18 @@ html, body {
 }
 
 .event__count {
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  font-weight: 500;
-  color: var(--ink-faint);
-  margin-left: 0.4rem;
+  font-family: var(--body);
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.12rem 0.45rem;
+  margin-left: 0.5rem;
+  white-space: nowrap;
   vertical-align: middle;
 }
 
@@ -544,11 +551,14 @@ html, body {
   margin: 0;
   padding: 0;
   display: flex;
+}
+
+/* Same-room series: compact chips. */
+.event__group--chips {
   flex-wrap: wrap;
   gap: 0.35rem;
 }
-
-.event__group li {
+.event__group--chips li {
   font-family: var(--body);
   font-size: 0.8rem;
   font-weight: 500;
@@ -559,6 +569,29 @@ html, body {
   padding: 0.2rem 0.5rem;
   line-height: 1.25;
 }
+
+/* Different-room series: rows, each showing its own room. */
+.event__group--rows {
+  flex-direction: column;
+  gap: 0;
+}
+.event__group--rows li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 0.32rem 0;
+  border-top: 1px dashed var(--rule);
+}
+.event__group--rows li:first-child { border-top: none; }
+.event__groupName {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.event__group--rows .event__location { color: var(--ink-soft); }
 
 .event__comments {
   grid-column: 1 / -1;
@@ -828,6 +861,12 @@ html, body {
   }
   .event__audience { grid-row: 2; }
   .event__comments { grid-row: 4; }
+  /* Condensed header: stack title over room so long room names don't clip. */
+  .event__condensedHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
 }
 
 /* Reduced motion */
