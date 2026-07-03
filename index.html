@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Apply the saved theme before first paint to avoid a flash of the default. -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("spark-theme");
+        if (saved === "ink" || saved === "paper") {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      } catch (e) { /* localStorage unavailable (private mode) — keep default */ }
+    })();
+  </script>
 </head>
 <body>
   <header class="masthead">

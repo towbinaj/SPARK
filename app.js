@@ -298,10 +298,11 @@ function setupNav() {
     populateJumper();
   });
 
-  // Theme toggle (paper ↔ ink)
+  // Theme toggle (paper ↔ ink) — persisted so it survives reloads.
   document.getElementById("themeBtn").addEventListener("click", () => {
-    const curr = document.documentElement.getAttribute("data-theme");
-    document.documentElement.setAttribute("data-theme", curr === "ink" ? "paper" : "ink");
+    const next = document.documentElement.getAttribute("data-theme") === "ink" ? "paper" : "ink";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("spark-theme", next); } catch (e) { /* ignore */ }
   });
 
   // Keyboard nav
