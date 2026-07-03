@@ -169,15 +169,6 @@ function pageHeaderHTML(week) {
   `;
 }
 
-function pageFooterHTML(left, right) {
-  return `
-    <div class="page__footer">
-      <span>${left}</span>
-      <span>${right}</span>
-    </div>
-  `;
-}
-
 // Desktop slide — Department + Division side by side, joint spanning above.
 function buildSlideDesktop(week) {
   const dept  = getBlock(week, "department");
@@ -199,7 +190,6 @@ function buildSlideDesktop(week) {
             <div class="col col--division">${divHTML}</div>
           </div>
         </div>
-        ${pageFooterHTML("SPARK · CCHMC Radiology", "Wednesday Programming")}
       </div>
     </div>
   `;
@@ -234,7 +224,6 @@ function buildSlideMobile(week, i) {
       <div class="page">
         ${pageHeaderHTML(week)}
         <div class="page__content">${bodyHTML}</div>
-        ${pageFooterHTML("SPARK · CCHMC Radiology", "")}
       </div>
     </div>
   `;
@@ -270,7 +259,6 @@ function goTo(index, animate = true) {
     void track.offsetWidth;
     track.style.transition = "";
   }
-  updatePageInfo();
 }
 
 function next() { goTo(currentIndex + 1); }
@@ -288,15 +276,6 @@ function setLastUpdated(iso) {
     hour: "numeric", minute: "2-digit",
   });
   el.textContent = `Updated ${stamp}`;
-}
-
-function updatePageInfo() {
-  const week = weeksData[currentIndex];
-  if (!week) return;
-  const todayStr = TODAY.toISOString().slice(0, 10);
-  const tag = week.date < todayStr ? "Past" : (week.date === todayStr ? "Today" : "Upcoming");
-  document.getElementById("pageInfo").textContent =
-    `${fmtDateShort(week.date)} · ${tag}`;
 }
 
 /* ---------- UI Wiring ---------- */

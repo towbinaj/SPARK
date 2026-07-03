@@ -538,18 +538,6 @@ html, body {
   font-size: 0.9rem;
 }
 
-.page__footer {
-  margin-top: auto;
-  padding-top: 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  color: var(--ink-faint);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
 /* ------- ARROWS ------- */
 .page-arrow {
   position: absolute;
