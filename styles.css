@@ -664,8 +664,34 @@ html, body {
 
 .jumper__controls {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
   margin-bottom: 0.9rem;
+}
+
+.jumper__years {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.jumper__years[hidden] { display: none; }
+.jumper__years button {
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.jumper__years button:hover {
+  border-color: var(--ink);
+  color: var(--ink);
 }
 
 .jumper__toggle {

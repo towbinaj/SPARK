@@ -391,7 +391,7 @@ function populateJumper() {
     const isCurrent = i === upcomingIdx;
     const tag = past ? "Past" : (isCurrent ? "Upcoming" : "Future");
     html += `
-      <li class="jumper__item">
+      <li class="jumper__item" data-year="${w.date.slice(0, 4)}">
         <button data-week="${i}" class="${isCurrent ? "is-current" : ""}">
           <span>${fmtDateShort(w.date)}</span>
           <span class="week-meta">${tag}</span>
@@ -399,6 +399,20 @@ function populateJumper() {
       </li>`;
   }
   list.innerHTML = html || `<li class="jumper__empty">No weeks to show.</li>`;
+
+  // Quick "jump to year" chips — only when the visible weeks span 2+ years.
+  const years = [...new Set(items.map(it => it.w.date.slice(0, 4)))];
+  const yearsEl = document.getElementById("jumperYears");
+  yearsEl.hidden = years.length < 2;
+  yearsEl.innerHTML = years.length < 2
+    ? ""
+    : years.map(y => `<button type="button" data-year="${y}">${y}</button>`).join("");
+  yearsEl.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const first = list.querySelector(`.jumper__item[data-year="${btn.dataset.year}"]`);
+      if (first) first.scrollIntoView({ block: "start" });
+    });
+  });
 
   // Past toggle — labelled with the count, hidden when there's no past.
   const toggle = document.getElementById("jumperPastToggle");
