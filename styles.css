@@ -516,6 +516,50 @@ html, body {
   text-transform: uppercase;
 }
 
+/* ------- CONDENSED CLUSTER CARD ------- */
+.event--condensed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.event__condensedHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.event__count {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--ink-faint);
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.event__group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.event__group li {
+  font-family: var(--body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 0.2rem 0.5rem;
+  line-height: 1.25;
+}
+
 .event__comments {
   grid-column: 1 / -1;
   grid-row: 3;
