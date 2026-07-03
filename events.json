@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-03T03:19:42.467Z",
+  "_generatedAt": "2026-07-03T04:21:28.232Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -716,7 +716,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Orientation - Education, PFE & Policy",
+              "title": "Professional Governance: Orientation - Education, PFE & Policy",
               "audience": "Council Members",
               "location": "G1.034",
               "virtual": true
@@ -822,7 +822,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Orientation - Safety, Access & EE Council",
+              "title": "Professional Governance: Orientation - Safety, Access & EE Council",
               "audience": "Council Members",
               "location": "G1.034",
               "virtual": true
@@ -991,8 +991,8 @@
             {
               "startTime": "0745",
               "endTime": "0830",
-              "title": "PG: Council Orientation (ALL COUNCILS)",
-              "audience": "PG Members",
+              "title": "Professional Governance: Council Orientation (ALL COUNCILS)",
+              "audience": "Professional Governance Members",
               "location": "G1.034",
               "virtual": true,
               "comments": "Contact Susan Masterson for any questions"
@@ -1115,8 +1115,8 @@
             {
               "startTime": "0745",
               "endTime": "0830",
-              "title": "PG: Chair & Co-Chair Orientation",
-              "audience": "PG Chairs & Co-Chairs",
+              "title": "Professional Governance: Chair & Co-Chair Orientation",
+              "audience": "Professional Governance Chairs & Co-Chairs",
               "location": "D2.28",
               "virtual": true,
               "comments": "Contact Susan Masterson for any questions"
@@ -1135,7 +1135,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Leadership Council Meeting",
+              "title": "Professional Governance: Leadership Council Meeting",
               "audience": "Council Members",
               "location": "Kasota 6th Floor",
               "virtual": true
@@ -1232,7 +1232,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Professional Development & Education Council",
+              "title": "Professional Governance: Professional Development & Education Council",
               "audience": "Council Members",
               "location": "S9.130",
               "virtual": true
@@ -1240,7 +1240,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Safety & Quality Council",
+              "title": "Professional Governance: Safety & Quality Council",
               "audience": "Council Members",
               "location": "S6.125",
               "virtual": true
@@ -1248,7 +1248,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Employee Experience Council",
+              "title": "Professional Governance: Employee Experience Council",
               "audience": "Council Members",
               "location": "S3.125",
               "virtual": true
@@ -1347,7 +1347,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Access Council",
+              "title": "Professional Governance: Access Council",
               "audience": "Council Members",
               "location": "S3.125",
               "virtual": true
@@ -1355,7 +1355,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: PFE Council",
+              "title": "Professional Governance: PFE Council",
               "audience": "Council Members",
               "location": "S7.125",
               "virtual": true
@@ -1363,7 +1363,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Policy Council",
+              "title": "Professional Governance: Policy Council",
               "audience": "Council Members",
               "location": "S10.130",
               "virtual": true
@@ -1741,7 +1741,7 @@
               "virtual": false
             },
             {
-              "startTime": "0745",
+              "startTime": "0750",
               "endTime": "0835",
               "title": "Professional Division Meeting: Cardiac",
               "audience": "Faculty",
@@ -1771,7 +1771,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Professional Development & Education Council",
+              "title": "Professional Governance: Professional Development & Education Council",
               "audience": "Council Members",
               "location": "S9.130",
               "virtual": true
@@ -1779,7 +1779,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Safety & Quality Council",
+              "title": "Professional Governance: Safety & Quality Council",
               "audience": "Council Members",
               "location": "S6.125",
               "virtual": true
@@ -1787,7 +1787,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Employee Experience Council",
+              "title": "Professional Governance: Employee Experience Council",
               "audience": "Council Members",
               "location": "S3.125",
               "virtual": true
@@ -1892,7 +1892,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Access",
+              "title": "Professional Governance: Access",
               "audience": "Council Members",
               "location": "S3.125",
               "virtual": true
@@ -1900,7 +1900,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: PFE Council",
+              "title": "Professional Governance: PFE Council",
               "audience": "Council Members",
               "location": "S7.125",
               "virtual": true
@@ -1908,7 +1908,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Practice & Policy",
+              "title": "Professional Governance: Practice & Policy",
               "audience": "Council Members",
               "location": "S10.130",
               "virtual": true
@@ -2112,7 +2112,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PG: Leadership Council",
+              "title": "Professional Governance: Leadership Council",
               "audience": "Sponsors, mentors, chairs & co-chairs",
               "location": "Kasota 6th Floor",
               "virtual": true
