@@ -1,0 +1,59 @@
+name: Refresh events
+
+# Rebuilds events.json from the published Smartsheet and commits it back to
+# the repo — but only when the actual schedule data changed, so we don't spam
+# the history with hourly timestamp-only commits.
+
+on:
+  schedule:
+    - cron: "0 * * * *" # top of every hour (UTC)
+  workflow_dispatch: {} # manual "Run workflow" button in the Actions tab
+
+# Allow the job to push the refreshed events.json back to the branch.
+permissions:
+  contents: write
+
+# Never let two refreshes run at once (e.g. a manual run during a scheduled one).
+concurrency:
+  group: refresh-events
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rebuild events.json and commit only on data change
+        run: |
+          set -euo pipefail
+          # Hash the schedule data (ignoring the _generatedAt timestamp) before…
+          before=$(jq -Sc '.weeks' events.json | sha256sum | cut -d' ' -f1)
+
+          node scripts/build-events.js
+
+          # …and after the rebuild.
+          after=$(jq -Sc '.weeks' events.json | sha256sum | cut -d' ' -f1)
+
+          if [ "$before" = "$after" ]; then
+            echo "No schedule changes — discarding timestamp-only update."
+            git checkout -- events.json
+            exit 0
+          fi
+
+          echo "Schedule changed — committing refreshed events.json."
+          git config user.name  "spark-refresh-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add events.json
+          git commit -m "chore: refresh events.json from Smartsheet [skip ci]"
+          git push
