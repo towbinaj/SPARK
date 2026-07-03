@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-03T02:27:54.317Z",
+  "_generatedAt": "2026-07-03T03:19:42.467Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -310,7 +310,7 @@
               "audience": "Department-Wide",
               "location": "G1.034",
               "virtual": true,
-              "comments": "Topic: Adjusting to Changes in the Workplace - Hybrid Meeting - Preferred in person for main campus teammatesAn open dialogue session with our Spring Health partners to explore strategies to cope with the stress of transitions at work while continuing to grow professionally and personally. These sessions are offered as a hybrid session, both online and in-person, though they are not recorded due to the personal nature of the dialogue."
+              "comments": "Topic: Adjusting to Changes in the Workplace - Hybrid Meeting - Preferred in person for main campus teammates\n\nAn open dialogue session with our Spring Health partners to explore strategies to cope with the stress of transitions at work while continuing to grow professionally and personally. These sessions are offered as a hybrid session, both online and in-person, though they are not recorded due to the personal nature of the dialogue."
             }
           ]
         },
@@ -1101,7 +1101,7 @@
               "audience": "Department-Wide",
               "location": "G1.034",
               "virtual": true,
-              "comments": "Title: AI-Enabled Precision Imaging in Pediatric Liver TumorsObjectives1. Briefly review the core concepts of precision imaging, radiomics, and foundation models.2. Share our team’s research focused on developing and applying AI and radiomics-based tools in patients with hepatoblastoma, with the goal of enabling more personalized cancer care."
+              "comments": "Title: AI-Enabled Precision Imaging in Pediatric Liver Tumors\n\nObjectives\n1. Briefly review the core concepts of precision imaging, radiomics, and foundation models.\n2. Share our team’s research focused on developing and applying AI and radiomics-based tools in patients with hepatoblastoma, with the goal of enabling more personalized cancer care."
             },
             {
               "startTime": "0745",
@@ -1472,7 +1472,7 @@
               "audience": "Department-Wide",
               "location": "G1.034",
               "virtual": true,
-              "comments": "Title: So you want to scan a mouse? Things to considerBlurb: This presentation will discuss mouse MRI research and how it is similar to human research. The objectives of the presentation are to explain why one might want to scan a mouse, briefly introduce the regulations associated with animal work, describe the general work flow of an animal MRI, and provide some exemplary data from projects that have been done on our 7T small animal MRI."
+              "comments": "Title: So you want to scan a mouse? Things to consider\n\nBlurb: This presentation will discuss mouse MRI research and how it is similar to human research. The objectives of the presentation are to explain why one might want to scan a mouse, briefly introduce the regulations associated with animal work, describe the general work flow of an animal MRI, and provide some exemplary data from projects that have been done on our 7T small animal MRI."
             }
           ]
         },

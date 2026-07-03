@@ -83,8 +83,16 @@ function parseRows(html) {
         cells.push($img.attr("alt") === "true");
         return;
       }
-      // Cheerio's .text() concatenates all descendant text; nested tables OK.
-      const text = $td.text().replace(/\s+/g, " ").trim();
+      // Smartsheet emits <br/> for line breaks inside a cell. Turn those into
+      // newlines and collapse only *horizontal* whitespace, so multi-line
+      // comments keep their structure. Cells without breaks are unaffected.
+      $td.find("br").replaceWith("\n");
+      const text = $td.text()
+        .replace(/\r\n?/g, "\n")          // normalize CR / CRLF
+        .replace(/[^\S\n]+/g, " ")         // collapse horizontal ws (space/tab/nbsp), keep \n
+        .replace(/ *\n */g, "\n")          // trim spaces around newlines
+        .replace(/\n{3,}/g, "\n\n")       // cap runs of blank lines at one
+        .trim();
       cells.push(text);
     });
 
