@@ -157,7 +157,7 @@ html, body {
   content: "Cincinnati Children’s Radiology  ·  Wednesday Programming";
 }
 
-/* ------- STAGE / BOOK ------- */
+/* ------- STAGE / CAROUSEL ------- */
 .stage {
   position: relative;
   display: flex;
@@ -167,43 +167,70 @@ html, body {
   min-height: 70vh;
 }
 
-.book-wrap {
+.carousel {
   position: relative;
-  width: min(1080px, 96vw);
-  display: flex;
-  justify-content: center;
-  min-height: 540px;
+  width: min(1000px, 94vw);
+  height: clamp(560px, 75vh, 820px);
+  overflow: hidden;
 }
 
-#book {
-  width: 100%;
-  height: clamp(560px, 75vh, 820px);
-  margin: 0 auto;
-  filter: drop-shadow(0 28px 50px rgba(60, 40, 20, .22));
+.track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+  transition: transform .45s cubic-bezier(.4, 0, .2, 1);
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  padding: 4px 10px 12px;
 }
 
 @media (max-width: 899px) {
-  #book {
+  .carousel {
     height: clamp(560px, 80vh, 780px);
-    max-width: 420px;
+    width: min(440px, 96vw);
   }
+  .slide { padding: 4px 2px 12px; }
 }
 
 /* ------- PAGE ------- */
 .page {
+  flex: 1;
+  min-height: 0;
   background: var(--paper);
   color: var(--ink);
   padding: 2rem 2rem 1.4rem;
   position: relative;
   overflow: hidden;
-  /* StPageFlip writes inline `display:block` on .stf__item, which is the same
-     element as .page. Force flex with !important so the scrollable content area
-     can size correctly between the date header and the page footer. */
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   font-family: var(--body);
-  height: 100% !important;
+  border-radius: 4px;
+  box-shadow: 0 28px 50px rgba(60, 40, 20, .22);
 }
+[data-theme="ink"] .page {
+  box-shadow: 0 28px 50px rgba(0, 0, 0, .5);
+}
+
+/* ------- COLUMNS (desktop: Department | Division) ------- */
+.slide__joint {
+  padding-bottom: 1.2rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+.slide__joint .block { margin-top: 1.2rem; }
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.col { min-width: 0; }
+.col--department { padding-right: 1.8rem; border-right: 1px solid var(--rule); }
+.col--division   { padding-left: 1.8rem; }
+.col .block { margin-top: 0.4rem; }
 
 /* Scrollable content area between the date header and the page footer */
 .page__content {
@@ -222,31 +249,6 @@ html, body {
 .page__content::-webkit-scrollbar-thumb {
   background: var(--rule-strong);
   border-radius: 3px;
-}
-
-/* spine shadow */
-.page--left::after,
-.page--right::after {
-  content: "";
-  position: absolute;
-  top: 0; bottom: 0;
-  width: 24px;
-  pointer-events: none;
-}
-.page--left::after {
-  right: 0;
-  background: linear-gradient(90deg, rgba(60,40,20,0) 0%, rgba(60,40,20,.08) 100%);
-}
-.page--right::after {
-  left: 0;
-  background: linear-gradient(270deg, rgba(60,40,20,0) 0%, rgba(60,40,20,.08) 100%);
-}
-[data-theme="ink"] .page--left::after,
-[data-theme="ink"] .page--right::after {
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 100%);
-}
-[data-theme="ink"] .page--right::after {
-  background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 100%);
 }
 
 .page__date-line {
@@ -736,5 +738,6 @@ html, body {
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+  .track { transition: none; }
   .page-arrow:hover { transform: translateY(-50%); }
 }

@@ -1,17 +1,16 @@
 /* =====================================================================
    SPARK · Calendar app
    - Loads events.json (placeholder; will be replaced by Smartsheet feed)
-   - Renders pages dynamically
-   - Initializes StPageFlip (book animation)
-   - Switches between two-page (desktop) and single-page (mobile)
+   - Renders one week per slide in a horizontal carousel
+   - Slides between weeks (translateX); swipe on touch, arrows / keys on desktop
+   - Desktop: Department + Division shown side by side; mobile: tabbed
    ===================================================================== */
 
 const BREAKPOINT = 900;
 const TODAY = new Date();
 
-let pageFlip = null;
 let weeksData = [];
-let pageMap = []; // pageFlip page index → weeksData index
+let currentIndex = 0;
 
 /* ---------- Helpers ---------- */
 
@@ -150,7 +149,7 @@ function buildBlockHTML(block) {
   `;
 }
 
-/* ---------- Render: Pages ---------- */
+/* ---------- Render: Slides ---------- */
 
 function getBlock(week, type) {
   return week.blocks.find(b => b.type === type);
@@ -177,91 +176,69 @@ function pageFooterHTML(left, right) {
   `;
 }
 
-function buildPagesDesktop() {
-  const pages = [];
-  pageMap = [];
-  const total = weeksData.length;
+// Desktop slide — Department + Division side by side, joint spanning above.
+function buildSlideDesktop(week) {
+  const dept  = getBlock(week, "department");
+  const div   = getBlock(week, "division");
+  const joint = getJointBlock(week);
 
-  weeksData.forEach((week, i) => {
-    const dept  = getBlock(week, "department");
-    const div   = getBlock(week, "division");
-    const joint = getJointBlock(week);
+  const jointHTML = joint ? `<div class="slide__joint">${buildBlockHTML(joint)}</div>` : "";
+  const deptHTML  = dept ? buildBlockHTML(dept) : `<div class="events--empty">No Department session</div>`;
+  const divHTML   = div  ? buildBlockHTML(div)  : `<div class="events--empty">No Division session</div>`;
 
-    // LEFT PAGE — Department (+ joint if present)
-    const leftBody = joint && !dept
-      ? buildBlockHTML(joint)
-      : `${joint ? buildBlockHTML(joint) : ""}${dept ? buildBlockHTML(dept) : `<div class="events--empty">No Department session</div>`}`;
-
-    pages.push(`
-      <div class="page page--left">
+  return `
+    <div class="slide">
+      <div class="page">
         ${pageHeaderHTML(week)}
-        <div class="page__content">${leftBody}</div>
-        ${pageFooterHTML("SPARK · CCHMC Radiology", "")}
+        <div class="page__content">
+          ${jointHTML}
+          <div class="cols">
+            <div class="col col--department">${deptHTML}</div>
+            <div class="col col--division">${divHTML}</div>
+          </div>
+        </div>
+        ${pageFooterHTML("SPARK · CCHMC Radiology", "Wednesday Programming")}
       </div>
-    `);
-    pageMap.push(i);
-
-    // RIGHT PAGE — Division (+ joint if present)
-    const rightBody = joint && !div
-      ? buildBlockHTML(joint)
-      : `${joint ? buildBlockHTML(joint) : ""}${div ? buildBlockHTML(div) : `<div class="events--empty">No Division session</div>`}`;
-
-    pages.push(`
-      <div class="page page--right">
-        ${pageHeaderHTML(week)}
-        <div class="page__content">${rightBody}</div>
-        ${pageFooterHTML("", "Wednesday Programming")}
-      </div>
-    `);
-    pageMap.push(i);
-  });
-
-  return pages;
+    </div>
+  `;
 }
 
-function buildPagesMobile() {
-  const pages = [];
-  pageMap = [];
+// Mobile slide — tabbed when both blocks exist, else stacked.
+function buildSlideMobile(week, i) {
+  const dept  = getBlock(week, "department");
+  const div   = getBlock(week, "division");
+  const joint = getJointBlock(week);
 
-  weeksData.forEach((week, i) => {
-    const dept  = getBlock(week, "department");
-    const div   = getBlock(week, "division");
-    const joint = getJointBlock(week);
+  let bodyHTML;
+  if (dept && div) {
+    bodyHTML = `
+      ${joint ? `<div class="joint-banner">${buildBlockHTML(joint)}</div>` : ""}
+      <div class="tabs" role="tablist">
+        <button class="tab tab--department is-active" data-tab-target="dept-${i}" type="button">Department</button>
+        <button class="tab tab--division" data-tab-target="div-${i}" type="button">Division</button>
+      </div>
+      <div class="tab-panel" id="dept-${i}">${buildBlockHTML(dept)}</div>
+      <div class="tab-panel" id="div-${i}" hidden>${buildBlockHTML(div)}</div>
+    `;
+  } else {
+    const blocks = [joint, dept, div].filter(Boolean);
+    bodyHTML = blocks.length
+      ? blocks.map(buildBlockHTML).join("")
+      : `<div class="events--empty">No events scheduled</div>`;
+  }
 
-    let bodyHTML;
-    if (dept && div) {
-      // Two-block week: tabbed view (joint banner above tabs if present)
-      bodyHTML = `
-        ${joint ? `<div class="joint-banner">${buildBlockHTML(joint)}</div>` : ""}
-        <div class="tabs" role="tablist">
-          <button class="tab tab--department is-active" data-tab-target="dept-${i}" type="button">Department</button>
-          <button class="tab tab--division" data-tab-target="div-${i}" type="button">Division</button>
-        </div>
-        <div class="tab-panel" id="dept-${i}">${buildBlockHTML(dept)}</div>
-        <div class="tab-panel" id="div-${i}" hidden>${buildBlockHTML(div)}</div>
-      `;
-    } else {
-      // Single-block week (joint-only, or only one of dept/div): show full
-      const blocks = [joint, dept, div].filter(Boolean);
-      bodyHTML = blocks.length
-        ? blocks.map(buildBlockHTML).join("")
-        : `<div class="events--empty">No events scheduled</div>`;
-    }
-
-    pages.push(`
-      <div class="page page--single">
+  return `
+    <div class="slide">
+      <div class="page">
         ${pageHeaderHTML(week)}
         <div class="page__content">${bodyHTML}</div>
         ${pageFooterHTML("SPARK · CCHMC Radiology", "")}
       </div>
-    `);
-    pageMap.push(i);
-  });
-
-  return pages;
+    </div>
+  `;
 }
 
-/* ---------- Navigation ---------- */
+/* ---------- Carousel ---------- */
 
 function nearestUpcomingWeekIndex() {
   const todayStr = TODAY.toISOString().slice(0, 10);
@@ -271,73 +248,34 @@ function nearestUpcomingWeekIndex() {
   return Math.max(0, weeksData.length - 1);
 }
 
-function pageIndexForWeek(weekIndex) {
-  return isDesktop() ? weekIndex * 2 : weekIndex;
+function renderTrack() {
+  const track = document.getElementById("track");
+  const build = isDesktop() ? buildSlideDesktop : buildSlideMobile;
+  track.innerHTML = weeksData.map((w, i) => build(w, i)).join("");
+  goTo(currentIndex, false);
 }
 
-/* ---------- Book initialization ---------- */
+// Move the track to `index`. `animate=false` snaps with no transition.
+function goTo(index, animate = true) {
+  currentIndex = Math.max(0, Math.min(index, weeksData.length - 1));
+  const track = document.getElementById("track");
+  if (!track) return;
 
-function pageDimensions() {
-  const desktop = isDesktop();
-  if (desktop) {
-    // Two-page spread — each page is portrait-ish 3:4
-    return { width: 460, height: 620 };
+  if (!animate) track.style.transition = "none";
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  if (!animate) {
+    // Force a reflow so the snap applies before we restore the transition.
+    void track.offsetWidth;
+    track.style.transition = "";
   }
-  return { width: 360, height: 600 };
+  updatePageInfo();
 }
 
-function initBook() {
-  const desktop = isDesktop();
-  const pages = desktop ? buildPagesDesktop() : buildPagesMobile();
+function next() { goTo(currentIndex + 1); }
+function prev() { goTo(currentIndex - 1); }
 
-  // Tear down previous instance, then recreate the container fresh.
-  // (destroy() can leave the DOM in an inconsistent state if we've also
-  // mutated container.innerHTML, so we always rebuild from scratch.)
-  if (pageFlip) {
-    try { pageFlip.destroy(); } catch (e) { /* noop */ }
-    pageFlip = null;
-  }
-
-  const wrap = document.querySelector(".book-wrap");
-  wrap.innerHTML = '<div id="book"></div>';
-  const container = wrap.querySelector("#book");
-  container.innerHTML = pages.join("");
-
-  const dims = pageDimensions();
-
-  pageFlip = new St.PageFlip(container, {
-    width: dims.width,
-    height: dims.height,
-    size: "stretch",
-    minWidth: 280,
-    maxWidth: 540,
-    minHeight: 460,
-    maxHeight: 720,
-    showCover: false,
-    flippingTime: 700,
-    usePortrait: !desktop,
-    autoSize: true,
-    maxShadowOpacity: 0.4,
-    drawShadow: true,
-    mobileScrollSupport: false,
-    swipeDistance: 30,
-  });
-
-  pageFlip.loadFromHTML(container.querySelectorAll(".page"));
-
-  const startWeek = nearestUpcomingWeekIndex();
-  const startPage = pageIndexForWeek(startWeek);
-
-  // Snap immediately (no animation) to the upcoming week
-  pageFlip.turnToPage(startPage);
-
-  pageFlip.on("flip", e => updatePageInfo(e.data));
-  updatePageInfo(startPage);
-}
-
-function updatePageInfo(pageIndex) {
-  const weekIndex = pageMap[pageIndex] ?? 0;
-  const week = weeksData[weekIndex];
+function updatePageInfo() {
+  const week = weeksData[currentIndex];
   if (!week) return;
   const todayStr = TODAY.toISOString().slice(0, 10);
   const tag = week.date < todayStr ? "Past" : (week.date === todayStr ? "Today" : "Upcoming");
@@ -348,15 +286,10 @@ function updatePageInfo(pageIndex) {
 /* ---------- UI Wiring ---------- */
 
 function setupNav() {
-  document.getElementById("prevBtn").addEventListener("click", () => {
-    pageFlip?.flipPrev();
-  });
-  document.getElementById("nextBtn").addEventListener("click", () => {
-    pageFlip?.flipNext();
-  });
+  document.getElementById("prevBtn").addEventListener("click", prev);
+  document.getElementById("nextBtn").addEventListener("click", next);
   document.getElementById("todayBtn").addEventListener("click", () => {
-    if (!pageFlip) return;
-    pageFlip.flip(pageIndexForWeek(nearestUpcomingWeekIndex()));
+    goTo(nearestUpcomingWeekIndex());
   });
 
   const dialog = document.getElementById("jumperDialog");
@@ -366,8 +299,7 @@ function setupNav() {
   });
 
   // Theme toggle (paper ↔ ink)
-  const themeBtn = document.getElementById("themeBtn");
-  themeBtn.addEventListener("click", () => {
+  document.getElementById("themeBtn").addEventListener("click", () => {
     const curr = document.documentElement.getAttribute("data-theme");
     document.documentElement.setAttribute("data-theme", curr === "ink" ? "paper" : "ink");
   });
@@ -375,17 +307,33 @@ function setupNav() {
   // Keyboard nav
   document.addEventListener("keydown", e => {
     if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
-    if (e.key === "ArrowLeft")  pageFlip?.flipPrev();
-    if (e.key === "ArrowRight") pageFlip?.flipNext();
+    if (e.key === "ArrowLeft")  prev();
+    if (e.key === "ArrowRight") next();
   });
 
-  // Tab switching (mobile blocks): delegated since pages live inside the
-  // pageFlip-managed DOM and re-render on viewport changes.
+  // Swipe (touch). Only act on a mostly-horizontal gesture so vertical
+  // scrolling inside a page still works.
+  const carousel = document.getElementById("carousel");
+  let startX = null, startY = null;
+  carousel.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  carousel.addEventListener("touchend", e => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+      dx < 0 ? next() : prev();
+    }
+    startX = startY = null;
+  }, { passive: true });
+
+  // Tab switching (mobile blocks), delegated.
   document.addEventListener("click", e => {
     const tab = e.target.closest(".tab");
     if (!tab || !tab.dataset.tabTarget) return;
     e.preventDefault();
-    e.stopPropagation();
     const targetId = tab.dataset.tabTarget;
     const tablist  = tab.parentElement;
     const page     = tablist.parentElement;
@@ -417,8 +365,7 @@ function populateJumper() {
 
   list.querySelectorAll("button").forEach(btn => {
     btn.addEventListener("click", () => {
-      const w = Number(btn.dataset.week);
-      pageFlip?.flip(pageIndexForWeek(w));
+      goTo(Number(btn.dataset.week));
       document.getElementById("jumperDialog").close();
     });
   });
@@ -434,7 +381,7 @@ window.addEventListener("resize", () => {
     const nowDesktop = isDesktop();
     if (nowDesktop !== wasDesktop) {
       wasDesktop = nowDesktop;
-      initBook();
+      renderTrack(); // rebuild slides for the new layout, keep the current week
     }
   }, 180);
 });
@@ -454,13 +401,14 @@ async function boot() {
   weeksData.sort((a, b) => a.date.localeCompare(b.date));
 
   if (!weeksData.length) {
-    document.getElementById("book").innerHTML =
+    document.getElementById("track").innerHTML =
       `<div style="padding:2rem;text-align:center;font-family:var(--body);font-style:italic">No events loaded.</div>`;
     return;
   }
 
+  currentIndex = nearestUpcomingWeekIndex();
   setupNav();
-  initBook();
+  renderTrack();
 }
 
 boot();

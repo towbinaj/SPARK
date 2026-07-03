@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js" defer></script>
 </head>
 <body>
   <header class="masthead">
@@ -31,11 +30,11 @@
   </header>
 
   <main class="stage">
-    <button class="page-arrow page-arrow--prev" id="prevBtn" aria-label="Previous">‹</button>
-    <div class="book-wrap">
-      <div id="book"></div>
+    <button class="page-arrow page-arrow--prev" id="prevBtn" aria-label="Previous week">‹</button>
+    <div class="carousel" id="carousel">
+      <div class="track" id="track"></div>
     </div>
-    <button class="page-arrow page-arrow--next" id="nextBtn" aria-label="Next">›</button>
+    <button class="page-arrow page-arrow--next" id="nextBtn" aria-label="Next week">›</button>
   </main>
 
   <footer class="footer">

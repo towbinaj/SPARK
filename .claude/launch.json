@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "spark",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "5173"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve.js"],
       "port": 5173
     }
   ]
