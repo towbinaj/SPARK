@@ -11,6 +11,7 @@ const TODAY = new Date();
 
 let weeksData = [];
 let currentIndex = 0;
+let lastGeneratedAt = "";
 
 /* ---------- Helpers ---------- */
 
@@ -274,6 +275,20 @@ function goTo(index, animate = true) {
 function next() { goTo(currentIndex + 1); }
 function prev() { goTo(currentIndex - 1); }
 
+// "Updated Jul 2, 2026, 10:27 PM" — from events.json's _generatedAt (the last
+// time the schedule data changed). Shown in the footer; left blank if missing.
+function setLastUpdated(iso) {
+  const el = document.getElementById("lastUpdated");
+  if (!el) return;
+  const d = iso ? new Date(iso) : null;
+  if (!d || isNaN(d)) { el.textContent = ""; return; }
+  const stamp = d.toLocaleString("en-US", {
+    month: "short", day: "numeric", year: "numeric",
+    hour: "numeric", minute: "2-digit",
+  });
+  el.textContent = `Updated ${stamp}`;
+}
+
 function updatePageInfo() {
   const week = weeksData[currentIndex];
   if (!week) return;
@@ -393,6 +408,7 @@ async function boot() {
     const res = await fetch("events.json", { cache: "no-cache" });
     const data = await res.json();
     weeksData = data.weeks || [];
+    lastGeneratedAt = data._generatedAt || "";
   } catch (err) {
     console.warn("Could not fetch events.json — using inline fallback.", err);
     weeksData = window.__SPARK_FALLBACK__?.weeks || [];
@@ -409,6 +425,7 @@ async function boot() {
   currentIndex = nearestUpcomingWeekIndex();
   setupNav();
   renderTrack();
+  setLastUpdated(lastGeneratedAt);
 }
 
 boot();
