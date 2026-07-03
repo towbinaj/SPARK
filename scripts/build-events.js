@@ -16,12 +16,31 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_URL =
   "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3";
 
+// Keep a rolling window of past weeks so events.json stays lean as the
+// Smartsheet accumulates history. Future weeks are always kept.
+const RETAIN_MONTHS = 12;
+
 function parseArgs() {
-  const out = { url: DEFAULT_URL };
+  const out = { url: DEFAULT_URL, retainMonths: RETAIN_MONTHS };
   for (const a of process.argv.slice(2)) {
     if (a.startsWith("--url=")) out.url = a.slice("--url=".length);
+    else if (a.startsWith("--retain-months=")) {
+      const n = parseInt(a.slice("--retain-months=".length), 10);
+      if (Number.isFinite(n) && n >= 0) out.retainMonths = n;
+    }
   }
   return out;
+}
+
+// ISO date `monthsBack` months before today (local). Weeks dated on or after
+// this are kept; older ones are pruned.
+function retentionCutoffISO(monthsBack) {
+  const d = new Date();
+  d.setMonth(d.getMonth() - monthsBack);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
 }
 
 // "04/08/26" -> "2026-04-08"
@@ -142,7 +161,7 @@ function transformRows(rows) {
 }
 
 async function main() {
-  const { url } = parseArgs();
+  const { url, retainMonths } = parseArgs();
   console.log(`→ fetching ${url}`);
   const html = await fetchHTML(url);
   console.log(`  ${(html.length / 1024).toFixed(0)} KB received`);
@@ -150,7 +169,16 @@ async function main() {
   const { headers, rows } = parseRows(html);
   console.log(`→ parsed ${rows.length} rows; columns: ${headers.join(", ")}`);
 
-  const weeks = transformRows(rows);
+  const allWeeks = transformRows(rows);
+
+  // Prune past weeks outside the rolling retention window; keep all future.
+  const cutoff = retentionCutoffISO(retainMonths);
+  const weeks = allWeeks.filter(w => w.date >= cutoff);
+  const pruned = allWeeks.length - weeks.length;
+  if (pruned > 0) {
+    console.log(`→ pruned ${pruned} week(s) older than ${cutoff} (${retainMonths}-month window)`);
+  }
+
   const totalEvents = weeks.reduce(
     (sum, w) => sum + w.blocks.reduce((s, b) => s + b.events.length, 0),
     0,
