@@ -1,4 +1,4 @@
-<svg width="2000" height="250" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-14 -73 1106 373" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="sparkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#D54070"/>
@@ -11,9 +11,9 @@
     </linearGradient>
   </defs>
   <text
-    x="500"
+    x="0"
     y="217"
-    text-anchor="middle"
+    text-anchor="start"
     font-size="300"
     font-family="Inter, Helvetica, Arial, sans-serif"
     font-weight="700"
