@@ -12,6 +12,7 @@ const TODAY = new Date();
 let weeksData = [];
 let currentIndex = 0;
 let lastGeneratedAt = "";
+let jumperShowPast = false; // jumper hides past weeks until toggled
 
 /* ---------- Helpers ---------- */
 
@@ -309,8 +310,13 @@ function setupNav() {
 
   const dialog = document.getElementById("jumperDialog");
   document.getElementById("jumpBtn").addEventListener("click", () => {
+    jumperShowPast = false; // always reopen focused on now + upcoming
     populateJumper();
     dialog.showModal();
+  });
+  document.getElementById("jumperPastToggle").addEventListener("click", () => {
+    jumperShowPast = !jumperShowPast;
+    populateJumper();
   });
 
   // Theme toggle (paper ↔ ink)
@@ -364,26 +370,53 @@ function populateJumper() {
   const list = document.getElementById("jumperList");
   const todayStr = TODAY.toISOString().slice(0, 10);
   const upcomingIdx = nearestUpcomingWeekIndex();
+  const pastCount = weeksData.filter(w => w.date < todayStr).length;
 
-  list.innerHTML = weeksData.map((w, i) => {
-    const past = w.date < todayStr;
+  // Hide past weeks by default so the list stays short and focused on
+  // now + upcoming as the schedule grows week over week.
+  const items = weeksData
+    .map((w, i) => ({ w, i, past: w.date < todayStr }))
+    .filter(it => jumperShowPast || !it.past);
+
+  // Render, inserting a sticky month header whenever the month changes.
+  let html = "";
+  let lastMonth = "";
+  for (const { w, i, past } of items) {
+    const month = new Date(w.date + "T12:00:00")
+      .toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    if (month !== lastMonth) {
+      html += `<li class="jumper__month">${month}</li>`;
+      lastMonth = month;
+    }
     const isCurrent = i === upcomingIdx;
-    return `
-      <li>
+    const tag = past ? "Past" : (isCurrent ? "Upcoming" : "Future");
+    html += `
+      <li class="jumper__item">
         <button data-week="${i}" class="${isCurrent ? "is-current" : ""}">
           <span>${fmtDateShort(w.date)}</span>
-          <span class="week-meta">${past ? "Past" : (isCurrent ? "Upcoming" : "Future")}</span>
+          <span class="week-meta">${tag}</span>
         </button>
-      </li>
-    `;
-  }).join("");
+      </li>`;
+  }
+  list.innerHTML = html || `<li class="jumper__empty">No weeks to show.</li>`;
 
-  list.querySelectorAll("button").forEach(btn => {
+  // Past toggle — labelled with the count, hidden when there's no past.
+  const toggle = document.getElementById("jumperPastToggle");
+  toggle.hidden = pastCount === 0;
+  toggle.textContent = jumperShowPast
+    ? "Hide past weeks"
+    : `Show ${pastCount} past week${pastCount === 1 ? "" : "s"}`;
+
+  list.querySelectorAll("button[data-week]").forEach(btn => {
     btn.addEventListener("click", () => {
       goTo(Number(btn.dataset.week));
       document.getElementById("jumperDialog").close();
     });
   });
+
+  // Open focused on the upcoming week (or the first row if none upcoming).
+  const cur = list.querySelector(".is-current") || list.querySelector("button[data-week]");
+  if (cur) cur.scrollIntoView({ block: "nearest" });
 }
 
 /* ---------- Resize handling ---------- */
