@@ -71,11 +71,9 @@ html, body {
 .masthead {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-areas:
-    "brand nav"
-    "sub   sub";
+  grid-template-areas: "brand nav";
   gap: 1.25rem;
-  padding: 2rem 2.5rem 1.25rem;
+  padding: 1rem 2.5rem;
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
@@ -84,7 +82,7 @@ html, body {
 .masthead__brand {
   grid-area: brand;
   display: inline-block;
-  width: 200px;
+  width: 240px;
   line-height: 0;
 }
 
@@ -139,38 +137,19 @@ html, body {
   color: var(--paper);
 }
 
-.masthead__sub {
-  grid-area: sub;
-  margin: 0;
-  font-family: var(--body);
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--ink-soft);
-  letter-spacing: 0.005em;
-  border-top: 1px solid var(--rule);
-  padding-top: 0.85rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.masthead__sub::before {
-  content: "Cincinnati Children’s Radiology  ·  Wednesday Programming";
-}
-
 /* ------- STAGE / CAROUSEL ------- */
 .stage {
   position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 1.5rem 1rem 2.5rem;
-  min-height: 70vh;
+  padding: 0.5rem 1rem 1rem;
 }
 
 .carousel {
   position: relative;
   width: min(1000px, 94vw);
-  height: clamp(560px, 75vh, 820px);
+  height: clamp(560px, 82vh, 900px);
   overflow: hidden;
 }
 
@@ -604,7 +583,7 @@ html, body {
 
 /* ------- FOOTER ------- */
 .footer {
-  padding: 1.25rem;
+  padding: 0.6rem 1.25rem 0.9rem;
   font-family: var(--mono);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
@@ -613,7 +592,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.3rem;
 }
 
 .footer__updated {
@@ -786,15 +765,13 @@ html, body {
 @media (max-width: 899px) {
   .masthead {
     grid-template-columns: 1fr;
-    grid-template-areas: "brand" "nav" "sub";
+    grid-template-areas: "brand" "nav";
     text-align: left;
-    padding: 1.5rem 1.25rem 0.9rem;
-    gap: 0.9rem;
+    padding: 1rem 1.25rem 0.75rem;
+    gap: 0.75rem;
   }
-  .masthead__brand { width: 160px; }
+  .masthead__brand { width: 190px; }
   .masthead__nav { justify-self: stretch; flex-wrap: wrap; }
-  .masthead__sub { flex-direction: column; gap: 0.4rem; }
-  .masthead__sub::after { align-self: flex-start; }
   .page { padding: 1.6rem 1.2rem 1.2rem; }
   .page-arrow--prev { left: 4px; }
   .page-arrow--next { right: 4px; }
