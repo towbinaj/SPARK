@@ -9,6 +9,11 @@
 const BREAKPOINT = 900;
 const TODAY = new Date();
 
+// Today's *local* calendar date (YYYY-MM-DD). Using the viewer's local date —
+// not TODAY.toISOString(), which is UTC and would roll to tomorrow in the
+// evening for timezones behind UTC (e.g. after 8pm US Eastern).
+const TODAY_STR = `${TODAY.getFullYear()}-${String(TODAY.getMonth() + 1).padStart(2, "0")}-${String(TODAY.getDate()).padStart(2, "0")}`;
+
 let weeksData = [];
 let currentIndex = 0;
 let lastGeneratedAt = "";
@@ -232,7 +237,7 @@ function buildSlideMobile(week, i) {
 /* ---------- Carousel ---------- */
 
 function nearestUpcomingWeekIndex() {
-  const todayStr = TODAY.toISOString().slice(0, 10);
+  const todayStr = TODAY_STR;
   for (let i = 0; i < weeksData.length; i++) {
     if (weeksData[i].date >= todayStr) return i;
   }
@@ -348,7 +353,7 @@ function setupNav() {
 
 function populateJumper() {
   const list = document.getElementById("jumperList");
-  const todayStr = TODAY.toISOString().slice(0, 10);
+  const todayStr = TODAY_STR;
   const upcomingIdx = nearestUpcomingWeekIndex();
   const pastCount = weeksData.filter(w => w.date < todayStr).length;
 
