@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-03T04:21:28.232Z",
+  "_generatedAt": "2026-07-07T13:48:08.785Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -1568,7 +1568,7 @@
               "endTime": "0745",
               "title": "RIC Town Hall",
               "audience": "Department-Wide",
-              "location": "",
+              "location": "G1.034",
               "virtual": true
             }
           ]
