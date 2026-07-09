@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-08T14:52:00.787Z",
+  "_generatedAt": "2026-07-09T03:12:05.678Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -1628,7 +1628,7 @@
             {
               "startTime": "0750",
               "endTime": "0835",
-              "title": "Professional Division Meeting: Rad/Fluoro & US",
+              "title": "Radiologist: PACS Tips and Tricks",
               "audience": "Faculty",
               "location": "G1.034",
               "virtual": true
