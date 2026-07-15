@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-09T03:12:05.678Z",
+  "_generatedAt": "2026-07-15T14:38:17.806Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -1658,8 +1658,9 @@
               "endTime": "0745",
               "title": "PFE",
               "audience": "Department-Wide",
-              "location": "",
-              "virtual": true
+              "location": "G1.034",
+              "virtual": true,
+              "comments": "PFE: Introduction, overview and PFE week celebration: Our Mission is Possible"
             }
           ]
         },
@@ -1885,8 +1886,9 @@
               "endTime": "0745",
               "title": "Research",
               "audience": "Department-Wide",
-              "location": "",
-              "virtual": true
+              "location": "G1.034",
+              "virtual": true,
+              "comments": "Research at Cincinnati Children's Radiology: The Big Picture\nWe will provide an overview of research for the department."
             },
             {
               "startTime": "0700",
