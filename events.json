@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-15T14:38:17.806Z",
+  "_generatedAt": "2026-07-16T15:35:16.495Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2002,7 +2002,7 @@
               "endTime": "0745",
               "title": "Wellness",
               "audience": "",
-              "location": "",
+              "location": "G1.034",
               "virtual": false
             }
           ]
