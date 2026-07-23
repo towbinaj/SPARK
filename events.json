@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-22T19:33:10.223Z",
+  "_generatedAt": "2026-07-23T17:33:26.433Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2000,11 +2000,10 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "Wellness: Your Inner Critic and the Art of Self Compassion",
+              "title": "MRI Safety Presentation",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": false,
-              "comments": "One Spring Health person will be conducting this in person in the G conference room. Those joining online will only be online and not participating with those in the room. This allows for the groups to be smaller and makes facilitating conversation a bit easier."
+              "virtual": false
             }
           ]
         },
