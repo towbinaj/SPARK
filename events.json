@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-23T17:33:26.433Z",
+  "_generatedAt": "2026-07-27T15:03:46.378Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2003,7 +2003,7 @@
               "title": "MRI Safety Presentation",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": false
+              "virtual": true
             }
           ]
         },
@@ -2196,6 +2196,170 @@
               "audience": "Faculty",
               "location": "Reading Room Pod",
               "virtual": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Grand Rounds:",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Professional Development & Education Council",
+              "audience": "Coucil Members",
+              "location": "S9.130",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Safety & Quality Council",
+              "audience": "Council Members",
+              "location": "S6.125",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Employee Experience Council",
+              "audience": "Council Members",
+              "location": "S3.125",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: Rad/Fluoro",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: MSK",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Neuro",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Nuc Med",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "blocks": [
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Operations Town Hall",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Access",
+              "audience": "Council Members",
+              "location": "S3.125",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: PFE Council",
+              "audience": "Council Members",
+              "location": "S7.125",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Practice & Policy",
+              "audience": "Council Members",
+              "location": "S10.130",
+              "virtual": true
             }
           ]
         }
