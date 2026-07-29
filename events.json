@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-27T15:03:46.378Z",
+  "_generatedAt": "2026-07-29T12:47:30.814Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2360,6 +2360,72 @@
               "audience": "Council Members",
               "location": "S10.130",
               "virtual": true
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: Rad/Fluoro",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Rad/Fluoro & US",
+              "audience": "Faculty",
+              "location": "G1.034",
+              "virtual": false,
+              "comments": "Led by division leaders - Combined group"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: IRC",
+              "audience": "Faculty",
+              "location": "S2.110",
+              "virtual": false,
+              "comments": "Led by division leaders"
             }
           ]
         }
