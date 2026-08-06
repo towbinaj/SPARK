@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-07-29T12:47:30.814Z",
+  "_generatedAt": "2026-08-06T23:04:25.158Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2426,6 +2426,111 @@
               "location": "S2.110",
               "virtual": false,
               "comments": "Led by division leaders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Research",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: Rad/Fluoro",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Trunk",
+              "audience": "Technologist",
+              "location": "G1.034",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Fetal",
+              "audience": "Technologist",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: IR",
+              "audience": "Technologist",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Cardiac",
+              "audience": "Technologist",
+              "location": "Reading Room Pod",
+              "virtual": false
             }
           ]
         }
