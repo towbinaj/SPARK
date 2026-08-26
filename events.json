@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-08-14T17:21:14.377Z",
+  "_generatedAt": "2026-08-26T19:36:39.671Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2211,10 +2211,11 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "Grand Rounds:",
+              "title": "Grand Rounds: Dr. Alex Towbin",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": true
+              "virtual": true,
+              "comments": "From Images to Impact: Advancing pediatric imaging through research, collaboration, advocacy, and informatics"
             },
             {
               "startTime": "0700",
