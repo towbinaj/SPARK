@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-08-28T15:02:58.589Z",
+  "_generatedAt": "2026-08-31T15:15:37.674Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2326,14 +2326,6 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "Operations Town Hall",
-              "audience": "Department-Wide",
-              "location": "G1.034",
-              "virtual": true
-            },
-            {
-              "startTime": "0700",
-              "endTime": "0745",
               "title": "Professional Governance: Access",
               "audience": "Council Members",
               "location": "S3.125",
@@ -2453,7 +2445,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "Research",
+              "title": "Operations Town Hall",
               "audience": "Department-Wide",
               "location": "G1.034",
               "virtual": true
