@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-08-31T15:15:37.674Z",
+  "_generatedAt": "2026-09-02T20:46:02.539Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2749,7 +2749,7 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "PFE:",
+              "title": "PFE: QI using Care Cards",
               "audience": "Department-Wide",
               "location": "G1.034",
               "virtual": true
