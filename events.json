@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-09-08T14:59:36.506Z",
+  "_generatedAt": "2026-09-08T18:32:50.533Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2555,14 +2555,6 @@
           "title": "Division",
           "events": [
             {
-              "startTime": "0700",
-              "endTime": "0745",
-              "title": "Professional Governance: Leadership Council",
-              "audience": "Sponsors, Mentors, Chairs & Co-Chairs",
-              "location": "Kasota 6th Floor",
-              "virtual": true
-            },
-            {
               "startTime": "0750",
               "endTime": "0835",
               "title": "Technical Staff Meeting: Rad/Fluoro",
@@ -3566,14 +3558,6 @@
               "title": "Wellness:",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": true
-            },
-            {
-              "startTime": "0700",
-              "endTime": "0745",
-              "title": "Professional Governance: Leadership Council",
-              "audience": "Sponsors, Mentors, Chairs & Co-Chairs",
-              "location": "Kasota 6th Floor",
               "virtual": true
             }
           ]
