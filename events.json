@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-09-03T17:39:15.829Z",
+  "_generatedAt": "2026-09-08T14:59:36.506Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2643,7 +2643,8 @@
               "title": "Grand Rounds: Dr. Shireen Hayatghaibi",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": true
+              "virtual": true,
+              "comments": "Beyond the Price Tag: Designing a Cost-of-Care Tool for Pediatric MRI"
             }
           ]
         },
