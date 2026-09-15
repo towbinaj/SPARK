@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-09-08T18:32:50.533Z",
+  "_generatedAt": "2026-09-15T18:46:07.059Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2605,10 +2605,10 @@
             {
               "startTime": "0750",
               "endTime": "0835",
-              "title": "Professional Division Meeting: Rad/Fluoro & US",
+              "title": "Radiologist New PACS Worklist Review",
               "audience": "Faculty",
               "location": "G1.034",
-              "virtual": false
+              "virtual": true
             },
             {
               "startTime": "0750",
