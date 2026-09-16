@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-09-15T18:46:07.059Z",
+  "_generatedAt": "2026-09-16T19:53:25.478Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2691,15 +2691,6 @@
               "audience": "Technologist",
               "location": "Manager Discretion",
               "virtual": false
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "Professional Division Meeting: Trunk",
-              "audience": "Faculty",
-              "location": "G1.034",
-              "virtual": false,
-              "comments": "Led by division leaders"
             },
             {
               "startTime": "0750",
