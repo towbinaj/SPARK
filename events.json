@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-09-16T19:53:25.478Z",
+  "_generatedAt": "2026-09-17T18:01:22.525Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -3604,6 +3604,539 @@
               "audience": "Technologist",
               "location": "Manager Discretion",
               "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Rad/Fluoro & US",
+              "audience": "Faculty",
+              "location": "G1.034",
+              "virtual": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Grand Rounds: Dr. Joe Meier",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Employee Experience",
+              "audience": "Council Members",
+              "location": "S3.125",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Professional Development & Education Council",
+              "audience": "Council Members",
+              "location": "S9.130",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Safety & Quality Council",
+              "audience": "Council Members",
+              "location": "S6.125",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Trunk",
+              "audience": "Faculty",
+              "location": "G1.034",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Fetal",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Cardiac",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: IR",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-12-09",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Operations Town Hall",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Access",
+              "audience": "Council Members",
+              "location": "S3.125",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: PFE Council",
+              "audience": "Council Members",
+              "location": "S7.125",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Practice & Policy",
+              "audience": "Council Members",
+              "location": "S10.130",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: MSK",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Neuro",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Nuc Med",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-12-16",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Research",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Leadership Council",
+              "audience": "Leadership",
+              "location": "Kasota",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "RLS",
+              "audience": "Faculty",
+              "location": "BM.484",
+              "virtual": false,
+              "comments": "Contact Laura Dickman for Sign-Up"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Rad/Fluoro & US",
+              "audience": "Faculty",
+              "location": "G1.034",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-12-23",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Wellness",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Trunk",
+              "audience": "Faculty",
+              "location": "G1.034",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Fetal",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Cardiac",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: IR",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-12-30",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Grand Rounds: Dr. Aki Tanimoto",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: MSK",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Neuro",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Nuc Med",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false,
+              "comments": "Led by division leaders"
             }
           ]
         }
