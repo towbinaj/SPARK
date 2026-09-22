@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-09-18T14:49:54.204Z",
+  "_generatedAt": "2026-09-22T14:29:11.832Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2975,7 +2975,8 @@
               "title": "Grand Rounds: Dr. Kim Cecil",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": true
+              "virtual": true,
+              "comments": "Growing Up in Cincinnati: How We Use Imaging to Understand the Effects of Environmental Chemical Exposures"
             },
             {
               "startTime": "0700",
