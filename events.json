@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-09-22T14:29:11.832Z",
+  "_generatedAt": "2026-09-29T15:30:33.302Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -2985,15 +2985,6 @@
               "audience": "Sponsors, Mentors, Chairs & Co-Chairs",
               "location": "Kasota 6th Floor",
               "virtual": true
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "RLS for Radiologists",
-              "audience": "Faculty",
-              "location": "BM.484",
-              "virtual": false,
-              "comments": "Led by Laura Dickman"
             }
           ]
         },
@@ -3103,6 +3094,15 @@
               "audience": "Department-Wide",
               "location": "G1.034",
               "virtual": true
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "RLS for Radiologists",
+              "audience": "Faculty",
+              "location": "BM.484",
+              "virtual": false,
+              "comments": "Led by Laura Dickman"
             }
           ]
         },
