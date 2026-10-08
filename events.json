@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-10-02T15:32:37.246Z",
+  "_generatedAt": "2026-10-08T15:22:49.312Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -3318,7 +3318,8 @@
               "title": "Grand Rounds: Dr. Jim Leach",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": true
+              "virtual": true,
+              "comments": "Perioperative Neuroimaging for Neurosurgery - Protocol review and update"
             },
             {
               "startTime": "0700",
@@ -3397,15 +3398,6 @@
               "audience": "Technologist",
               "location": "Manager Discretion",
               "virtual": false
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "Professional Division Meeting: Trunk",
-              "audience": "Faculty",
-              "location": "G1.034",
-              "virtual": false,
-              "comments": "Led by division leaders"
             },
             {
               "startTime": "0750",
