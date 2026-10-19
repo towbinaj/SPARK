@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-10-08T21:09:26.173Z",
+  "_generatedAt": "2026-10-19T19:08:30.001Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -3171,15 +3171,6 @@
               "startTime": "0750",
               "endTime": "0835",
               "title": "Professional Division Meeting: Neuro",
-              "audience": "Faculty",
-              "location": "Reading Room Pod",
-              "virtual": false,
-              "comments": "Led by division leaders"
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "Professional Division Meeting: Nuc Med",
               "audience": "Faculty",
               "location": "Reading Room Pod",
               "virtual": false,
