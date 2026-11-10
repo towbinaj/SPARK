@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-10-19T19:08:30.001Z",
+  "_generatedAt": "2026-11-10T00:00:29.977Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -3431,10 +3431,11 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "Research:",
+              "title": "Research: Dr. John Choi",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": true
+              "virtual": true,
+              "comments": "Getting More from Fetal MRI: Clearer Images, Faster Measurements, Better Predictions."
             }
           ]
         },
@@ -3853,16 +3854,8 @@
             {
               "startTime": "0700",
               "endTime": "0745",
-              "title": "Research",
-              "audience": "Department-Wide",
-              "location": "G1.034",
-              "virtual": true
-            },
-            {
-              "startTime": "0700",
-              "endTime": "0745",
               "title": "Professional Governance: Leadership Council",
-              "audience": "Leadership",
+              "audience": "Council Leaders",
               "location": "Kasota",
               "virtual": true
             }
@@ -3875,41 +3868,9 @@
             {
               "startTime": "0750",
               "endTime": "0835",
-              "title": "Technical Staff Meeting: CT",
-              "audience": "Technologist",
-              "location": "Manager Discretion",
-              "virtual": false
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "Technical Staff Meeting: MR",
-              "audience": "Technologist",
-              "location": "Manager Discretion",
-              "virtual": false
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "Technical Staff Meeting: US",
-              "audience": "Technologist",
-              "location": "Manager Discretion",
-              "virtual": false
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "Technical Staff Meeting: NM",
-              "audience": "Technologist",
-              "location": "Manager Discretion",
-              "virtual": false
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "Technical Staff Meeting: IR",
-              "audience": "Technologist",
-              "location": "Manager Discretion",
+              "title": "Professional Division Meeting: Rad/Fluoro & US",
+              "audience": "Faculty",
+              "location": "G1.034",
               "virtual": false
             },
             {
@@ -3920,15 +3881,6 @@
               "location": "BM.484",
               "virtual": false,
               "comments": "Contact Laura Dickman for Sign-Up"
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "Professional Division Meeting: Rad/Fluoro & US",
-              "audience": "Faculty",
-              "location": "G1.034",
-              "virtual": false,
-              "comments": "Led by division leaders"
             }
           ]
         }
