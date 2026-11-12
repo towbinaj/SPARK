@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-11-11T18:27:56.269Z",
+  "_generatedAt": "2026-11-12T01:22:45.669Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -3691,15 +3691,6 @@
             {
               "startTime": "0750",
               "endTime": "0835",
-              "title": "Professional Division Meeting: Trunk",
-              "audience": "Faculty",
-              "location": "G1.034",
-              "virtual": false,
-              "comments": "Led by division leaders"
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
               "title": "Professional Division Meeting: Fetal",
               "audience": "Faculty",
               "location": "Reading Room Pod",
@@ -3950,15 +3941,6 @@
             {
               "startTime": "0750",
               "endTime": "0835",
-              "title": "Professional Division Meeting: Trunk",
-              "audience": "Faculty",
-              "location": "G1.034",
-              "virtual": false,
-              "comments": "Led by division leaders"
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
               "title": "Professional Division Meeting: Fetal",
               "audience": "Faculty",
               "location": "Reading Room Pod",
@@ -4106,7 +4088,7 @@
               "title": "Professional Governance: Employee Experience",
               "audience": "Council Members",
               "location": "S3.125",
-              "virtual": false
+              "virtual": true
             },
             {
               "startTime": "0700",
@@ -4114,7 +4096,7 @@
               "title": "Professional Governance: Professional Development & Education Council",
               "audience": "Council Members",
               "location": "S9.130",
-              "virtual": false
+              "virtual": true
             },
             {
               "startTime": "0700",
@@ -4122,7 +4104,7 @@
               "title": "Professional Governance: Safety & Quality Council",
               "audience": "Council Members",
               "location": "S6.125",
-              "virtual": false
+              "virtual": true
             },
             {
               "startTime": "0750",
@@ -4190,7 +4172,7 @@
               "title": "Safety",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": false
+              "virtual": true
             },
             {
               "startTime": "0700",
@@ -4198,7 +4180,7 @@
               "title": "Professional Governance: Access",
               "audience": "Council Members",
               "location": "S3.125",
-              "virtual": false
+              "virtual": true
             },
             {
               "startTime": "0700",
@@ -4206,7 +4188,7 @@
               "title": "Professional Governance: PFE Council",
               "audience": "Council Members",
               "location": "S7.125",
-              "virtual": false
+              "virtual": true
             },
             {
               "startTime": "0700",
@@ -4214,7 +4196,7 @@
               "title": "Professional Governance: Practice & Policy",
               "audience": "Council Members",
               "location": "S10.130",
-              "virtual": false
+              "virtual": true
             }
           ]
         },
@@ -4482,7 +4464,7 @@
               "title": "Business:",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": false
+              "virtual": true
             }
           ]
         },
@@ -4496,23 +4478,23 @@
               "title": "Professional Governance: Employee Experience",
               "audience": "Council Members",
               "location": "D2.27",
-              "virtual": false
+              "virtual": true
             },
             {
               "startTime": "0700",
               "endTime": "0745",
               "title": "Professional Governance: Professional Development & Education Council",
               "audience": "Council Members",
-              "location": "",
-              "virtual": false
+              "location": "D2.22",
+              "virtual": true
             },
             {
               "startTime": "0700",
               "endTime": "0745",
               "title": "Professional Governance: Safety & Quality Council",
               "audience": "Council Members",
-              "location": "",
-              "virtual": false
+              "location": "D2.28",
+              "virtual": true
             },
             {
               "startTime": "0750",
@@ -4552,14 +4534,6 @@
               "title": "Technical Staff Meeting: IR",
               "audience": "Technologist",
               "location": "Manager Discretion",
-              "virtual": false
-            },
-            {
-              "startTime": "0750",
-              "endTime": "0835",
-              "title": "Professional Division Meeting: Trunk",
-              "audience": "Faculty",
-              "location": "Reading Room Pod",
               "virtual": false
             },
             {
@@ -4606,14 +4580,347 @@
               "title": "Grand Rounds: Dr. Ethan Smith",
               "audience": "Department-Wide",
               "location": "G1.034",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Access",
+              "audience": "Council Members",
+              "location": "D2.28",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: PFE Council",
+              "audience": "Council Members",
+              "location": "D2.27",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Practice & Policy",
+              "audience": "Council Member",
+              "location": "D2.20",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: MSK",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Neuro",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Nuc Med",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2027-02-17",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0835",
+              "title": "SPARK – Focus Time",
+              "audience": "Department-Wide",
+              "location": "",
               "virtual": false
             }
           ]
         },
         {
-          "type": "joint",
-          "title": "Joint Programming",
-          "events": []
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Rad/Fluoro & US",
+              "audience": "Faculty",
+              "location": "G1.034",
+              "virtual": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2027-02-24",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Wellness",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Leadership Council Meeting",
+              "audience": "Council Leadership",
+              "location": "Kasota",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Fetal",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Cardiac",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: IR",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2027-03-03",
+      "blocks": [
+        {
+          "type": "department",
+          "title": "Department",
+          "events": [
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Grand Rounds: Dr. Paul Guillerman",
+              "audience": "Department-Wide",
+              "location": "G1.034",
+              "virtual": true,
+              "comments": "Radiation risk and safety (with Sam Brady)"
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Employee Experience",
+              "audience": "Council Members",
+              "location": "D2.27",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Professional Development & Education Council",
+              "audience": "Council Members",
+              "location": "D2.22",
+              "virtual": true
+            },
+            {
+              "startTime": "0700",
+              "endTime": "0745",
+              "title": "Professional Governance: Safety & Quality Council",
+              "audience": "Council Members",
+              "location": "D2.28",
+              "virtual": true
+            }
+          ]
+        },
+        {
+          "type": "division",
+          "title": "Division",
+          "events": [
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: CT",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: MR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: US",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: NM",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Technical Staff Meeting: IR",
+              "audience": "Technologist",
+              "location": "Manager Discretion",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: MSK",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Neuro",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            },
+            {
+              "startTime": "0750",
+              "endTime": "0835",
+              "title": "Professional Division Meeting: Nuc Med",
+              "audience": "Faculty",
+              "location": "Reading Room Pod",
+              "virtual": false
+            }
+          ]
         }
       ]
     }
