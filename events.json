@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-11-16T19:34:30.351Z",
+  "_generatedAt": "2026-11-18T21:11:03.018Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -3616,7 +3616,8 @@
               "title": "Grand Rounds: Dr. Joe Meier",
               "audience": "Department-Wide",
               "location": "G1.034",
-              "virtual": true
+              "virtual": true,
+              "comments": "Deep Learning in CT: Promise, Performance, and Pitfalls Lessons from GE Apex and Canon INSIGHT at CCHMC"
             },
             {
               "startTime": "0700",
