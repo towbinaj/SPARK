@@ -1,5 +1,5 @@
 {
-  "_generatedAt": "2026-11-18T21:11:03.018Z",
+  "_generatedAt": "2026-11-19T20:13:43.406Z",
   "_source": "https://publish.smartsheet.com/0aa798e369234fa98e823ae6bb8cf3c3",
   "weeks": [
     {
@@ -5548,11 +5548,11 @@
               "virtual": true
             },
             {
-              "startTime": "0700",
-              "endTime": "0745",
+              "startTime": "0750",
+              "endTime": "0835",
               "title": "Professional Governance: Leadership Council",
               "audience": "Council Leaders",
-              "location": "Kasota",
+              "location": "G1.034",
               "virtual": true
             }
           ]
